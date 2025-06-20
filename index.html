@@ -1,35 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Charity: Water Landing</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>charity: water – Clean Water Changes Everything</title>
+  <style>
+    @font-face {
+      font-family: "Proxima Nova";
+      src: url("fonts/ProximaNova-Regular.woff2") format("woff2");
+      font-weight: 400;
+    }
+    @font-face {
+      font-family: "Proxima Nova";
+      src: url("fonts/ProximaNova-Bold.woff2") format("woff2");
+      font-weight: 700;
+    }
+
+    :root {
+      --clr-yellow: #FFC907;
+      --clr-blue: #2E9DF7;
+      --clr-dark: #222;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: "Proxima Nova", Avenir, sans-serif;
+      background: #fff;
+      color: var(--clr-dark);
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 960px;
+      margin: auto;
+      text-align: center;
+      padding: 40px 0;
+    }
+
+    .logo {
+      height: 40px;
+      margin-bottom: 20px;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('hero-placeholder.jpg') center/cover no-repeat;
+      color: var(--clr-yellow);
+      padding: 100px 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      background: var(--clr-yellow);
+      color: var(--clr-dark);
+      padding: 0.8rem 1.5rem;
+      text-decoration: none;
+      font-weight: 700;
+      border-radius: 30px;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+    .impact {
+      padding: 60px 20px;
+    }
+
+    .impact img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      background: var(--clr-dark);
+      color: #fff;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <a href="/">
-        <!-- Replace with your actual logo -->
-        <img src="logo-placeholder.png" alt="charity: water logo" class="logo">
-      </a>
-    </div>
-  </header>
+  <div class="container">
+    <img src="logo-placeholder.png" alt="charity: water logo" class="logo">
+  </div>
 
   <section class="hero">
-    <!-- Replace 'hero-placeholder.jpg' with your high-res hero image -->
-    <div class="hero-bg"></div>
-
-    <div class="hero-content container">
-      <h1>We’re Not Waiting<br><span class="highlight">We’re Solving It Together</span></h1>
-      <a href="#" class="btn">Donate here</a>
+    <div class="container">
+      <h1>We’re Not Waiting<br><span style="font-weight:400;">We’re Solving It Together</span></h1>
+      <a href="#" class="btn">Donate Now</a>
     </div>
   </section>
 
-  <footer class="site-footer">
-    <div class="container">
-      <!-- Optional footer content -->
-    </div>
+  <section class="impact container">
+    <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Amina with clean water">
+    <p>Meet Amina. She no longer walks miles for water thanks to your support. Her community now thrives with access to clean water.</p>
+  </section>
+
+  <footer>
+    © <span id="year"></span> charity: water
   </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
